@@ -1,0 +1,21 @@
+<div class="project-container">
+  <h2>Mes projets</h2>
+  <% @projects.each do |project| %>
+  <div class="card-trip">
+    <img src="<%= project[:banner_url] %>" />
+    <div class="card-trip-infos">
+      <div>
+        <p>
+          <%= project[:language] %>
+        </p>
+        <h2>
+          <%= project[:project_name] %>
+        </h2>
+        <p>
+          <%= project[:description] %>
+        </p>
+      </div>
+    </div>
+  </div>
+  <% end %>
+</div>
