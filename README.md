@@ -1,24 +1,46 @@
-# README
+Portfolio
+Ce projet est un portfolio personnel développé avec Ruby on Rails, destiné à présenter mes compétences, mes projets et mes réalisations dans le domaine du développement web.
 
-This README would normally document whatever steps are necessary to get the
-application up and running.
+Fonctionnalités
+Page d'accueil : Présentation générale avec une introduction personnelle et un aperçu des compétences.
+Projets : Section dédiée aux projets réalisés, avec descriptions détaillées, technologies utilisées et liens vers les dépôts GitHub ou les démonstrations.
+Contact : Informations de contact avec possibilité d'envoi de messages via un formulaire.
 
-Things you may want to cover:
+Installation
+Prérequis
+Ruby (version x.x.x)
+Ruby on Rails (version x.x.x)
 
-* Ruby version
+Instructions d'installation
+Clone le repository :
+git clone https://github.com/Daani7/portfolio
 
-* System dependencies
 
-* Configuration
+Installe les dépendances Ruby :
+bundle install
 
-* Database creation
+Crée la base de données PostgreSQL :
+rails db:create
+rails db:migrate
 
-* Database initialization
+Lance le serveur Rails :
+rails server
 
-* How to run the test suite
+Accède à l'application dans ton navigateur :
+Ouvre ton navigateur web et visite http://localhost:3000.
 
-* Services (job queues, cache servers, search engines, etc.)
+Contributions
+Les contributions sont les bienvenues ! Si vous souhaitez améliorer ce projet, veuillez suivre ces étapes :
 
-* Deployment instructions
+Fork le projet
+Crée une branche pour ta fonctionnalité (git checkout -b amelioration/NouvelleFonctionnalite)
 
-* ...
+Commit tes changements (git commit -am 'Ajoute une nouvelle fonctionnalité')
+
+Push vers la branche (git push origin amelioration/NouvelleFonctionnalite)
+
+Crée une nouvelle Pull Request
+
+Auteur
+Dani Derbala
+GitHub : github.com/Daani7
