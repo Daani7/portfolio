@@ -12,14 +12,15 @@ class HomeController < ApplicationController
 
   def get_skills
     [
-      { name: "C#", level: "Débutant" },
+      { name: "C#", level: "Intérmédiaire" },
       { name: "Ruby on Rails", level: "Intérmédiaire" },
-      { name: "Unity", level: "Débutant" },
+      { name: "Unity", level: "Intérmédiaire" },
       { name: "Java", level: "Débutant" },
       { name: "HTML & CSS", level: "Advanced" },
-      { name: "JavaScript", level: "Débutant" },
+      { name: "JavaScript", level: "Intermédiaire" },
       { name: "PostgreSql", level: "Intérmédiaire" },
       { name: "MySql", level: "Intérmédiaire" },
+      {name: "Figma", level: "Intérmédiaire"}
     ]
   end
 end
