@@ -1,38 +1,20 @@
-.presentation {
-  max-width: 800px;
-  margin: 0 auto;
-  padding: 20px;
-
-  h2 {
-    text-align: left;
-    text-decoration: underline;
-    margin-bottom: 35px;
-  }
+.home-clean {
+  max-width: 1100px;
 }
 
-.competences {
-  max-width: 800px;
-  padding: 20px;
-  margin: 0 auto;
+.about-avatar {
+  max-width: 150px;
+  width: 100%;
+  object-fit: cover;
 }
 
-.competences h1, .competences h2 {
-  text-align: left;
-  text-decoration: underline;
-  margin-bottom: 35px;
+.skill-tile {
+  background: #fff;
+  border-color: #e9ecef !important;
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
 }
 
-.skills {
-  list-style-type: none;
-  padding: 0;
-}
-
-.skills li {
-  padding: 10px;
-  border-bottom: 1px solid #ddd;
-}
-
-.skills li strong {
-  display: inline-block;
-  width: 200px;
+.skill-tile:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 8px 24px rgba(0, 0, 0, 0.08);
 }
