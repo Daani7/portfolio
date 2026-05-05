@@ -1,19 +1,31 @@
-<section class="card border-0 shadow-sm rounded-4">
-  <div class="card-body p-4 p-md-5">
-    <div class="d-flex flex-wrap justify-content-between align-items-center gap-2 mb-4">
-      <h2 class="h3 fw-bold mb-0">Compétences</h2>
-      <span class="text-secondary small">Niveau actuel</span>
-    </div>
+<div class="section-header" style="text-align: center;">
+  <h2>Mon <span class="gradient-text">Stack Technique</span></h2>
+  <p style="margin-left: auto; margin-right: auto;">Des outils modernes pour des solutions robustes et évolutives.</p>
+</div>
 
-    <div class="row g-3">
-      <% skills.each do |skill| %>
-        <div class="col-12 col-md-6 col-xl-4">
-          <article class="skill-tile rounded-3 h-100 p-3 border">
-            <p class="fw-semibold mb-1"><%= skill[:name] %></p>
-            <p class="mb-0 text-primary"><%= skill[:level] %></p>
-          </article>
-        </div>
-      <% end %>
+<%
+  skill_categories = [
+    { title: "Front-end", icon: "fas fa-desktop", variant: "blue",
+      skills: ["React", "Next.js", "Tailwind CSS", "TypeScript"] },
+    { title: "Back-end", icon: "fas fa-server", variant: "purple",
+      skills: ["Ruby on Rails", "Node.js", "PostgreSQL", "Redis"] },
+    { title: "Architecture", icon: "fas fa-microchip", variant: "green",
+      skills: ["RESTful APIs", "Docker", "CI/CD", "System Design"] }
+  ]
+%>
+
+<div class="skills-grid">
+  <% skill_categories.each do |cat| %>
+    <div class="glass skill-card">
+      <div class="icon-block icon-block--<%= cat[:variant] %>">
+        <i class="<%= cat[:icon] %>"></i>
+      </div>
+      <h3><%= cat[:title] %></h3>
+      <div class="skill-pills">
+        <% cat[:skills].each do |skill| %>
+          <span class="skill-pill"><%= skill %></span>
+        <% end %>
+      </div>
     </div>
-  </div>
-</section>
+  <% end %>
+</div>

@@ -7,20 +7,19 @@ class HomeController < ApplicationController
   private
 
   def get_presentation
-    "Bonjour ! Je m'appelle Dani, j'ai 19 ans et je suis passionné par le développement web, les jeux vidéo et la réalité virtuelle. Mon parcours dans le domaine du développement web m'a permis d'explorer les technologies comme Ruby on Rails, JavaScript, ainsi que le développement de jeux avec Unity et C#. À travers mes projets, j'explore la fusion entre la créativité et la technologie pour créer des expériences interactives captivantes. Bienvenue dans mon espace où je partage mes réalisations et mon exploration constante de ces domaines fascinants."
+    "Architecte digital de 20 ans passionné par la création d'écosystèmes web complets et immersifs. Mon expertise se concentre sur le développement Fullstack avec Ruby on Rails et React, ainsi que sur la conception d'architectures temps-réel performantes. Créateur de l'écosystème Insight Sphere, je m'efforce de repousser les limites de l'interactivité web, que ce soit à travers des plateformes de communication complexes comme Insight Spirits ou des sites de guides et d'articles comme Insight Nexus."
   end
 
   def get_skills
     [
-      { name: "C#", level: "Intérmédiaire" },
-      { name: "Ruby on Rails", level: "Intérmédiaire" },
-      { name: "Unity", level: "Intérmédiaire" },
-      { name: "Java", level: "Débutant" },
-      { name: "HTML & CSS", level: "Advanced" },
-      { name: "JavaScript", level: "Intermédiaire" },
-      { name: "PostgreSql", level: "Intérmédiaire" },
-      { name: "MySql", level: "Intérmédiaire" },
-      {name: "Figma", level: "Intérmédiaire"}
+      { name: "Ruby on Rails", level: "Expert" },
+      { name: "React & Next.js", level: "Avancé" },
+      { name: "PostgreSQL & Redis", level: "Avancé" },
+      { name: "WebSockets / ActionCable", level: "Avancé" },
+      { name: "Docker & CI/CD", level: "Intermédiaire" },
+      { name: "Vanilla CSS & Tailwind", level: "Expert" },
+      { name: "TypeScript", level: "Intermédiaire" },
+      { name: "Figma", level: "Avancé" }
     ]
   end
 end

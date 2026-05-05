@@ -1,18 +1,48 @@
-<section class="p-4 p-md-5 mb-4 rounded-4 bg-dark text-white shadow-sm border border-secondary-subtle">
-  <div class="row align-items-center g-4">
-    <div class="col-lg-8">
-      <p class="text-uppercase text-info small fw-semibold mb-2">Développeur web • univers gaming • créativité</p>
-      <h1 class="display-6 fw-bold mb-3">Je construis des expériences web modernes et utiles.</h1>
-      <p class="text-light-emphasis mb-4">
-        Un portfolio simple, propre et efficace pour présenter mes projets, ma vision et mon style.
-      </p>
-      <div class="d-flex flex-wrap gap-2">
-        <%= link_to "Voir mes projets", projects_path, class: "btn btn-primary px-4" %>
-        <%= link_to "Me contacter", contact_path, class: "btn btn-outline-light px-4" %>
+<section class="hero">
+  <div class="container">
+    <div class="hero-inner">
+      <!-- Left: Content -->
+      <div>
+        <span class="hero-subtitle">
+          <i class="fas fa-circle" style="font-size: 6px; vertical-align: middle; margin-right: 6px; color: #22d3ee;"></i>
+          Disponible pour de nouveaux défis
+        </span>
+
+        <h1>
+          Architecte<br>
+          <span class="gradient-text">Ecosystèmes</span><br>
+          Digitaux
+        </h1>
+
+        <p class="hero-desc">
+          Je conçois des expériences web d'exception, du back-end robuste au front-end immersif. Créateur de l'écosystème <strong>Insight Sphere</strong>.
+        </p>
+
+        <div class="hero-actions">
+          <a href="#projets" class="btn-glow">
+            Voir mes projets <i class="fas fa-arrow-right"></i>
+          </a>
+          <a href="https://github.com/Daani7" target="_blank" class="social-icon">
+            <i class="fab fa-github"></i>
+          </a>
+          <a href="#" class="social-icon">
+            <i class="fab fa-linkedin-in"></i>
+          </a>
+        </div>
       </div>
-    </div>
-    <div class="col-lg-4 text-lg-end">
-      <span class="badge rounded-pill text-bg-info fs-6">Disponible pour de nouveaux projets</span>
+
+      <!-- Right: Visual -->
+      <div class="hero-visual">
+        <div class="hero-orb">
+          <div class="hero-orb-ring"></div>
+          <div class="hero-orb-ring"></div>
+          <div class="hero-orb-ring"></div>
+          <div class="hero-stat-card glass">
+            <div class="stat-number gradient-text">3+</div>
+            <div class="stat-label">Années d'Expérience</div>
+          </div>
+        </div>
+      </div>
     </div>
   </div>
 </section>

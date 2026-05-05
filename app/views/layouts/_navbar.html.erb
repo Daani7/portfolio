@@ -1,31 +1,18 @@
-<div class="navbar navbar-expand-sm navbar-light navbar-lewagon">
-  <div class="container-fluid">
-    <%= link_to "#", class: "navbar-brand" do %>
-    <% end %>
+<nav class="site-nav">
+  <div class="container">
+    <a href="<%= root_path %>" class="nav-logo">
+      DANI<span class="highlight">.D</span>
+    </a>
 
-    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
-      <span class="navbar-toggler-icon"></span>
+    <button class="nav-toggle" onclick="document.querySelector('.nav-links').classList.toggle('is-open')">
+      <i class="fas fa-bars"></i>
     </button>
 
-    <div class="collapse navbar-collapse" id="navbarSupportedContent">
-      <ul class="navbar-nav me-auto">
-          <li class="nav-item active">
-            <%= link_to "Accueil", "/home", class: "nav-link" %>
-          </li>
-          <li class="nav-item">
-            <%= link_to "Projets", "/projects", class: "nav-link" %>
-          </li>
-          <li class="nav-item">
-            <%= link_to "Contact", "/contact", class: "nav-link" %>
-          </li>
-          <li class="nav-item dropdown">
-            <div class="dropdown-menu dropdown-menu-end" aria-labelledby="navbarDropdown">
-              <%= link_to "Accueil", "#", class: "dropdown-item" %>
-              <%= link_to "Projets", "/projects", class: "dropdown-item" %>
-              <%= link_to "Contact", "/contact", class: "dropdown-items" %>
-            </div>
-          </li>
-      </ul>
-    </div>
+    <ul class="nav-links">
+      <li><a href="#projets">Projets</a></li>
+      <li><a href="#competences">Compétences</a></li>
+      <li><a href="#a-propos">À propos</a></li>
+      <li><a href="#contact" class="nav-cta">Me contacter</a></li>
+    </ul>
   </div>
-</div>
+</nav>

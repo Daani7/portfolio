@@ -1,5 +1,20 @@
-<div class="container py-5 home-clean">
-  <%= render "home/components/hero" %>
-  <%= render "home/components/about", presentation: @presentation %>
-  <%= render "home/components/skills", skills: @skills %>
-</div>
+<%= render "home/components/hero" %>
+<%= render "home/components/projects" %>
+
+<section id="a-propos" class="section">
+  <div class="container">
+    <%= render "home/components/about", presentation: @presentation %>
+  </div>
+</section>
+
+<section id="competences" class="section">
+  <div class="container">
+    <%= render "home/components/skills", skills: @skills %>
+  </div>
+</section>
+
+<section id="contact" class="section">
+  <div class="container">
+    <%= render "home/components/contact" %>
+  </div>
+</section>
