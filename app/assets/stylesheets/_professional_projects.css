@@ -1,0 +1,251 @@
+/* ======================================================
+   PROFESSIONAL PROJECTS SECTION & PLAYGROUNDS
+   ====================================================== */
+
+/* --- TABS SYSTEM --- */
+.projects-tabs {
+  display: flex;
+  justify-content: center;
+  gap: 1rem;
+  margin-bottom: 3rem;
+}
+
+.tab-btn {
+  background: var(--bg-surface);
+  border: 1px solid var(--border-glass);
+  padding: 0.8rem 2rem;
+  border-radius: var(--radius-full);
+  color: var(--text-muted);
+  font-family: var(--font-display);
+  font-weight: 600;
+  cursor: pointer;
+  transition: all 0.3s var(--ease);
+}
+
+.tab-btn:hover {
+  border-color: rgba(255, 255, 255, 0.2);
+  color: #fff;
+}
+
+.tab-btn.is-active {
+  background: linear-gradient(135deg, var(--accent-purple), var(--accent-blue));
+  border-color: transparent;
+  color: #fff;
+  box-shadow: 0 8px 24px rgba(124, 58, 237, 0.3);
+}
+
+/* --- PROFESSIONAL GRID --- */
+.pro-grid {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 1.2rem;
+  margin-bottom: 2.5rem;
+}
+
+@media (max-width: 992px) {
+  .pro-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media (max-width: 576px) {
+  .pro-grid {
+    grid-template-columns: 1fr;
+  }
+}
+
+.pro-card {
+  padding: 1.5rem;
+  cursor: pointer;
+  position: relative;
+  overflow: hidden;
+  border-radius: var(--radius-lg);
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+}
+
+.pro-card::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  height: 3px;
+  background: transparent;
+  transition: background 0.3s ease;
+}
+
+.pro-card.is-active {
+  border-color: rgba(255, 255, 255, 0.25);
+  background: linear-gradient(135deg, rgba(124, 58, 237, 0.08) 0%, rgba(59, 130, 246, 0.06) 100%);
+  box-shadow: 0 8px 32px rgba(124, 58, 237, 0.12);
+}
+
+.pro-card.is-active::before {
+  background: linear-gradient(90deg, var(--accent-purple), var(--accent-blue));
+}
+
+.pro-card h4 {
+  font-size: 1.1rem;
+  margin: 0.8rem 0 0.4rem 0;
+}
+
+.pro-card p {
+  font-size: 0.82rem;
+  color: var(--text-muted);
+  line-height: 1.5;
+  margin-bottom: 1rem;
+  flex-grow: 1;
+}
+
+.pro-card-footer {
+  font-size: 0.75rem;
+  font-weight: 600;
+  display: flex;
+  align-items: center;
+  gap: 0.3rem;
+  color: var(--accent-cyan);
+}
+
+/* --- PLAYGROUND CONTAINER --- */
+.playground-container {
+  margin-top: 2rem;
+  padding: 2.5rem;
+  border-radius: var(--radius-xl);
+  min-height: 400px;
+  display: flex;
+  flex-direction: column;
+}
+
+.playground-header {
+  border-bottom: 1px solid var(--border-glass);
+  padding-bottom: 1.5rem;
+  margin-bottom: 2rem;
+}
+
+.playground-title {
+  display: flex;
+  align-items: center;
+  gap: 0.8rem;
+  font-size: 1.6rem;
+  margin-bottom: 0.4rem;
+}
+
+.playground-subtitle {
+  font-size: 0.9rem;
+  color: var(--text-muted);
+}
+
+.playground-pane {
+  animation: fadeIn 0.4s var(--ease);
+}
+
+/* --- HR TRACKER & HIGHCHARTS --- */
+.hr-chart-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 1rem;
+}
+
+.hr-filters {
+  display: flex;
+  gap: 0.5rem;
+  flex-wrap: wrap;
+}
+
+.hr-filter-btn {
+  background: rgba(255, 255, 255, 0.04);
+  border: 1px solid var(--border-glass);
+  padding: 0.4rem 1rem;
+  border-radius: var(--radius-full);
+  color: var(--text-muted);
+  font-size: 0.8rem;
+  font-weight: 500;
+  cursor: pointer;
+  transition: all 0.2s var(--ease);
+}
+
+.hr-filter-btn:hover, .hr-filter-btn.is-active {
+  border-color: rgba(255, 255, 255, 0.25);
+  color: #fff;
+  background: rgba(255, 255, 255, 0.08);
+}
+
+.hr-filter-btn.is-active {
+  border-color: var(--accent-blue);
+  background: rgba(59, 130, 246, 0.1);
+  color: #60a5fa;
+}
+
+.hr-charts-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 1.5rem;
+  margin-top: 1.5rem;
+}
+
+@media (max-width: 768px) {
+  .hr-charts-grid {
+    grid-template-columns: 1fr;
+  }
+}
+
+.hr-chart-box {
+  background: rgba(0, 0, 0, 0.15);
+  border: 1px solid var(--border-glass);
+  border-radius: var(--radius-lg);
+  padding: 1.5rem;
+  min-height: 300px;
+  position: relative;
+}
+
+/* Highcharts custom styles override */
+.highcharts-container {
+  border-radius: var(--radius-md);
+  overflow: hidden;
+}
+
+.highcharts-background {
+  fill: transparent !important;
+}
+
+/* --- CUSTOM TOAST NOTIFICATION --- */
+.toast-container-custom {
+  position: fixed;
+  bottom: 2rem;
+  right: 2rem;
+  z-index: 1000;
+  display: flex;
+  flex-direction: column;
+  gap: 0.8rem;
+}
+
+.toast-custom {
+  background: rgba(5, 0, 21, 0.85);
+  backdrop-filter: blur(12px);
+  -webkit-backdrop-filter: blur(12px);
+  border: 1px solid var(--border-glass);
+  padding: 1rem 1.5rem;
+  border-radius: var(--radius-md);
+  box-shadow: 0 10px 30px rgba(0,0,0,0.5);
+  display: flex;
+  align-items: center;
+  gap: 0.8rem;
+  color: #fff;
+  font-size: 0.88rem;
+  animation: slideInRight 0.3s cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+/* Animations */
+@keyframes slideInRight {
+  from { transform: translateX(100%); opacity: 0; }
+  to { transform: translateX(0); opacity: 1; }
+}
+
+@keyframes fadeIn {
+  from { opacity: 0; }
+  to { opacity: 1; }
+}

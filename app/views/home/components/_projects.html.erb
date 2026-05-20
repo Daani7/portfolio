@@ -1,75 +1,322 @@
-<section id="projets" class="section">
+<section id="projets" class="section" data-controller="professional-projects">
   <div class="container">
-    <div class="section-header">
-      <h2>Projets <span class="gradient-text">Phares</span></h2>
-      <p>L'écosystème Insight Sphere et ses composantes majeures.</p>
+    <div class="section-header" style="text-align: center;">
+      <h2>Mes <span class="gradient-text">Projets & Réalisations</span></h2>
+      <p style="margin-left: auto; margin-right: auto; max-width: 600px;">
+        Découvrez mon travail à travers mes projets personnels phares et mes réalisations professionnelles développées en entreprise.
+      </p>
     </div>
 
-    <div class="projects-grid">
-      <!-- Main ecosystem card -->
-      <div class="glass project-card project-card--hero" style="position: relative; overflow: hidden;">
-        <div class="icon-block icon-block--purple">
-          <i class="fas fa-layer-group"></i>
-        </div>
-        <h3>Insight Sphere Ecosystem</h3>
-        <p class="project-desc">
-          Une architecture unifiée regroupant plusieurs plateformes sous une API unique (Insight Nexus API). Une solution complète pour la gestion de contenu et la communication temps-réel.
-        </p>
-        <div class="project-tags">
-          <span class="tag tag--purple">Ruby on Rails</span>
-          <span class="tag tag--blue">React</span>
-          <span class="tag tag--green">Redis</span>
-          <span class="tag">PostgreSQL</span>
-          <span class="tag">ActionCable</span>
-        </div>
-        <div class="project-links">
-          <a href="#"><i class="fas fa-sitemap"></i> Architecture</a>
-          <a href="https://github.com/Daani7" target="_blank"><i class="fab fa-github"></i> GitHub</a>
-        </div>
-      </div>
+    <!-- TABS SELECTOR -->
+    <div class="projects-tabs">
+      <button class="tab-btn is-active" data-action="click->professional-projects#switchTab" data-tab-name="personal" data-professional-projects-target="tabBtn">
+        <i class="fas fa-rocket" style="margin-right: 6px;"></i> Projets Phares
+      </button>
+      <button class="tab-btn" data-action="click->professional-projects#switchTab" data-tab-name="professional" data-professional-projects-target="tabBtn">
+        <i class="fas fa-briefcase" style="margin-right: 6px;"></i> Expériences en Entreprise
+      </button>
+    </div>
 
-      <!-- Sub projects -->
-      <div class="project-sub-grid">
-        <!-- Insight Nexus -->
-        <div class="glass project-card">
-          <div class="icon-block icon-block--blue">
-            <i class="fas fa-book-open"></i>
+    <!-- TAB 1: PERSONAL PROJECTS (REACT VITE & SHARED RAILS API ECOSYSTEM) -->
+    <div class="tab-content-pane" data-professional-projects-target="tabContent" data-tab-name="personal">
+      <div class="projects-grid">
+        <!-- Unified Ecosystem description card -->
+        <div class="glass project-card project-card--hero" style="position: relative; overflow: hidden;">
+          <div class="icon-block icon-block--purple">
+            <i class="fas fa-layer-group"></i>
           </div>
-          <h3>Insight Nexus</h3>
+          <h3>Écosystème Insight Sphere</h3>
           <p class="project-desc">
-            Plateforme de guide et d'articles complets. Un espace structuré conçu pour la clarté et la performance, intégré nativement à l'écosystème.
+            Une architecture unifiée regroupant plusieurs plateformes frontend indépendantes développées en <strong>React JS (Vite.js)</strong>, alimentées par une API backend unique et robuste sous <strong>Ruby on Rails</strong>.
           </p>
           <div class="project-tags">
-            <span class="tag tag--blue">Ruby on Rails</span>
-            <span class="tag">Vanilla CSS</span>
+            <span class="tag tag--blue">Ruby on Rails (API)</span>
+            <span class="tag tag--purple">React JS (Vite.js)</span>
+            <span class="tag tag--green">Redis</span>
             <span class="tag">PostgreSQL</span>
-          </div>
-          <div class="project-links">
-            <a href="#"><i class="fas fa-external-link-alt"></i> Demo</a>
-            <a href="#"><i class="fab fa-github"></i> Code</a>
-          </div>
-        </div>
-
-        <!-- Insight Spirits -->
-        <div class="glass project-card">
-          <div class="icon-block icon-block--green">
-            <i class="fas fa-comments"></i>
-          </div>
-          <h3>Insight Spirits</h3>
-          <p class="project-desc">
-            Application de messagerie type Discord. Communication temps-réel, salons vocaux et gestion de serveurs via WebSocket et WebRTC.
-          </p>
-          <div class="project-tags">
-            <span class="tag tag--green">WebSockets</span>
-            <span class="tag">WebRTC</span>
             <span class="tag">ActionCable</span>
           </div>
           <div class="project-links">
-            <a href="#"><i class="fas fa-external-link-alt"></i> Demo</a>
-            <a href="#"><i class="fab fa-github"></i> Code</a>
+            <a href="https://github.com/Daani7" target="_blank"><i class="fab fa-github"></i> GitHub</a>
+          </div>
+        </div>
+
+        <!-- Sub projects -->
+        <div class="project-sub-grid">
+          <!-- Insight Nexus -->
+          <div class="glass project-card">
+            <div class="icon-block icon-block--blue">
+              <i class="fas fa-book-open"></i>
+            </div>
+            <h3>Insight Nexus</h3>
+            <p class="project-desc">
+              Application de guide et d'articles complets. Un espace structuré conçu pour la clarté et la performance.
+            </p>
+            <div class="project-tags">
+              <span class="tag tag--purple">React JS</span>
+              <span class="tag tag--blue">Vite.js</span>
+              <span class="tag">Rails API</span>
+            </div>
+            <div class="project-links">
+              <a href="#"><i class="fas fa-external-link-alt"></i> Démo</a>
+            </div>
+          </div>
+
+          <!-- Insight Spirits -->
+          <div class="glass project-card">
+            <div class="icon-block icon-block--green">
+              <i class="fas fa-comments"></i>
+            </div>
+            <h3>Insight Spirits</h3>
+            <p class="project-desc">
+              Application de discussion instantanée interactive (style Discord). Communication temps réel et salons de discussion.
+            </p>
+            <div class="project-tags">
+              <span class="tag tag--purple">React JS</span>
+              <span class="tag tag--blue">Vite.js</span>
+              <span class="tag tag--green">WebSockets</span>
+              <span class="tag">Rails API</span>
+            </div>
+            <div class="project-links">
+              <a href="#"><i class="fas fa-external-link-alt"></i> Démo</a>
+            </div>
           </div>
         </div>
       </div>
     </div>
+
+    <!-- TAB 2: CORPORATE PROJECTS (RAILS, WEBPACKER, STIMULUS, BOOTSTRAP) -->
+    <div class="tab-content-pane d-none" data-professional-projects-target="tabContent" data-tab-name="professional">
+      <div class="pro-grid">
+        <!-- Card 1: Maglev -->
+        <div class="glass pro-card is-active" data-action="click->professional-projects#selectProject" data-project-id="maglev" data-professional-projects-target="proCard">
+          <div class="icon-block icon-block--blue" style="width:40px; height:40px; font-size:1.1rem; margin-bottom:1rem;">
+            <i class="fas fa-cubes"></i>
+          </div>
+          <h4>Maglev CMS</h4>
+          <p>Intégration d'un éditeur visuel (Page Builder) sur-mesure pour autonomiser les équipes marketing de l'entreprise.</p>
+          <div class="pro-card-footer">
+            <span>Détails du projet</span> <i class="fas fa-arrow-right" style="font-size:0.75rem;"></i>
+          </div>
+        </div>
+
+        <!-- Card 2: Health survey -->
+        <div class="glass pro-card" data-action="click->professional-projects#selectProject" data-project-id="health" data-professional-projects-target="proCard">
+          <div class="icon-block icon-block--purple" style="width:40px; height:40px; font-size:1.1rem; margin-bottom:1rem;">
+            <i class="fas fa-file-medical-alt"></i>
+          </div>
+          <h4>Questionnaire Santé</h4>
+          <p>Implémentation backend d'un questionnaire intelligent s'appuyant sur une gestion JSONB moderne sous Rails.</p>
+          <div class="pro-card-footer">
+            <span>Détails du projet</span> <i class="fas fa-arrow-right" style="font-size:0.75rem;"></i>
+          </div>
+        </div>
+
+        <!-- Card 3: HR tracker -->
+        <div class="glass pro-card" data-action="click->professional-projects#selectProject" data-project-id="hr" data-professional-projects-target="proCard">
+          <div class="icon-block icon-block--green" style="width:40px; height:40px; font-size:1.1rem; margin-bottom:1rem;">
+            <i class="fas fa-users-cog"></i>
+          </div>
+          <h4>Affiliation & Suivi RH</h4>
+          <p>Refonte du tableau de bord de répartition des salariés (affiliés, dispensés) avec statistiques Highcharts.</p>
+          <div class="pro-card-footer">
+            <span>Démonstration graphique</span> <i class="fas fa-arrow-right" style="font-size:0.75rem;"></i>
+          </div>
+        </div>
+
+        <!-- Card 4: Design System -->
+        <div class="glass pro-card" data-action="click->professional-projects#selectProject" data-project-id="components" data-professional-projects-target="proCard">
+          <div class="icon-block icon-block--purple" style="width:40px; height:40px; font-size:1.1rem; margin-bottom:1rem;">
+            <i class="fas fa-paint-brush"></i>
+          </div>
+          <h4>Design System UI</h4>
+          <p>Création, correction et refonte globale de la bibliothèque de composants réutilisables d'entreprise.</p>
+          <div class="pro-card-footer">
+            <span>Détails du projet</span> <i class="fas fa-arrow-right" style="font-size:0.75rem;"></i>
+          </div>
+        </div>
+      </div>
+
+      <!-- PLAYGROUND VIEWPORTS -->
+      <div class="glass playground-container">
+        
+        <!-- PLAYGROUND 1: MAGLEV PAGE BUILDER -->
+        <div class="playground-pane" data-professional-projects-target="playgroundPane" data-project-id="maglev">
+          <div class="playground-header">
+            <h3 class="playground-title"><i class="fas fa-cubes gradient-text"></i> Maglev Page Builder (CMS)</h3>
+            <p class="playground-subtitle">Intégration d'un éditeur visuel modulaire en environnement Ruby on Rails.</p>
+          </div>
+          
+          <div class="row align-items-center">
+            <div class="col-lg-7">
+              <h4 style="color:#fff; font-size:1.2rem; margin-bottom:1rem;">Contexte et Réalisation</h4>
+              <p style="color:var(--text-muted); font-size:0.95rem; line-height:1.7;">
+                Les équipes éditoriales de la boîte avaient besoin d'une autonomie complète pour concevoir des pages marketing et de campagne sans dépendre du calendrier de livraison technique. J'ai configuré et intégré l'éditeur visuel <strong>Maglev</strong> au sein de l'application Rails de l'entreprise.
+              </p>
+              <p style="color:var(--text-muted); font-size:0.95rem; line-height:1.7; margin-top:0.8rem;">
+                J'ai mis en place l'architecture nécessaire pour supporter le rendu dynamique des blocs, créé plus de 15 sections réutilisables personnalisées (Hero banners, FAQ accordions, newsletters) et assuré leur encapsulation propre avec des contrôleurs Stimulus pour l'interactivité.
+              </p>
+            </div>
+            
+            <div class="col-lg-5">
+              <div class="glass" style="padding:2rem; border-color:rgba(124, 58, 237, 0.15); background:rgba(0,0,0,0.15)">
+                <h5 style="color:#fff; font-size:1.2rem; margin-bottom:1.2rem;"><i class="fas fa-cogs text-info"></i> Fiche d'information</h5>
+                <div style="display:flex; flex-direction:column; gap:0.8rem; font-size:0.85rem;">
+                  <div style="display:flex; justify-content:space-between;">
+                    <span style="color:var(--text-muted);">Impact :</span>
+                    <strong class="gradient-text">Autonomie totale du marketing</strong>
+                  </div>
+                  <div style="display:flex; flex-direction:column; gap:0.4rem; margin-top:0.5rem;">
+                    <span style="color:var(--text-muted);">Technologies utilisées :</span>
+                    <div style="display:flex; flex-wrap:wrap; gap:0.4rem;">
+                      <span class="tag tag--blue">Ruby on Rails</span>
+                      <span class="tag tag--purple">Webpacker</span>
+                      <span class="tag tag--green">StimulusJS</span>
+                      <span class="tag">Bootstrap</span>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- PLAYGROUND 2: HEALTH QUESTIONNAIRE -->
+        <div class="playground-pane d-none" data-professional-projects-target="playgroundPane" data-project-id="health">
+          <div class="playground-header">
+            <h3 class="playground-title"><i class="fas fa-file-medical-alt gradient-text"></i> Questionnaire Santé</h3>
+            <p class="playground-subtitle">Implémentation d'un tunnel de diagnostic avec persistance structurée en JSONB.</p>
+          </div>
+
+          <div class="row align-items-center">
+            <div class="col-lg-7">
+              <h4 style="color:#fff; font-size:1.2rem; margin-bottom:1rem;">Architecture Backend & Stockage JSONB</h4>
+              <p style="color:var(--text-muted); font-size:0.95rem; line-height:1.7;">
+                Pour ce projet d'auto-évaluation de santé au travail, les réponses devaient être persistées de manière hautement modulable sans alourdir le schéma relationnel SQL.
+              </p>
+              <p style="color:var(--text-muted); font-size:0.95rem; line-height:1.7; margin-top:0.8rem;">
+                Plutôt que d'utiliser la méthode classique <code>store_accessor</code> qui manque de souplesse pour la validation et l'écriture, j'ai implémenté le stockage des réponses au sein d'une unique colonne PostgreSQL <strong>JSONB</strong> en exploitant la méthode Rails <code>has_delegated_jsonb</code>. Cette approche permet de déléguer proprement les attributs typés du JSON vers des sous-classes dédiées, facilitant la validation des données, les valeurs par défaut et le requêtage propre.
+              </p>
+            </div>
+            
+            <div class="col-lg-5">
+              <div class="glass" style="padding:2rem; border-color:rgba(34, 211, 238, 0.15); background:rgba(0,0,0,0.15)">
+                <h5 style="color:#fff; font-size:1.2rem; margin-bottom:1.2rem;"><i class="fas fa-database text-success"></i> Avantages Techniques</h5>
+                <div style="display:flex; flex-direction:column; gap:0.8rem; font-size:0.85rem;">
+                  <div style="display:flex; justify-content:space-between;">
+                    <span style="color:var(--text-muted);">Méthode Rails :</span>
+                    <strong style="color:#fff;">has_delegated_jsonb</strong>
+                  </div>
+                  <div style="display:flex; justify-content:space-between;">
+                    <span style="color:var(--text-muted);">Stockage SQL :</span>
+                    <strong class="gradient-text">PostgreSQL JSONB</strong>
+                  </div>
+                  <div style="display:flex; flex-direction:column; gap:0.4rem; margin-top:0.5rem;">
+                    <span style="color:var(--text-muted);">Technologies utilisées :</span>
+                    <div style="display:flex; flex-wrap:wrap; gap:0.4rem;">
+                      <span class="tag tag--blue">Ruby on Rails</span>
+                      <span class="tag tag--purple">PostgreSQL</span>
+                      <span class="tag tag--green">Webpacker</span>
+                      <span class="tag">Bootstrap</span>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- PLAYGROUND 3: HR TRACKER WITH DOUBLE HIGHCHARTS -->
+        <div class="playground-pane d-none" data-professional-projects-target="playgroundPane" data-project-id="hr">
+          <div class="playground-header">
+            <div class="hr-chart-header">
+              <div>
+                <h3 class="playground-title"><i class="fas fa-users-cog gradient-text"></i> Suivi d'Affiliation RH</h3>
+                <p class="playground-subtitle">Analyse visuelle de l'affiliation de la mutuelle d'entreprise par profil de salarié.</p>
+              </div>
+            </div>
+            
+            <div class="hr-filters-container" style="display:flex; flex-wrap:wrap; gap:1.5rem; margin-top:1.2rem; padding:1rem; background:rgba(255,255,255,0.02); border-radius:var(--radius-md); border:1px solid var(--border-glass);">
+              <div style="display:flex; flex-direction:column; gap:0.4rem;">
+                <span style="font-size:0.75rem; color:var(--text-muted); font-weight:600; text-transform:uppercase;">Catégorie Professionnelle</span>
+                <div class="hr-filters">
+                  <button class="hr-filter-btn is-active" data-action="click->professional-projects#filterCategory" data-category="ensemble" data-professional-projects-target="categoryFilterBtn">Ensemble du personnel</button>
+                  <button class="hr-filter-btn" data-action="click->professional-projects#filterCategory" data-category="cadres" data-professional-projects-target="categoryFilterBtn">Cadres</button>
+                  <button class="hr-filter-btn" data-action="click->professional-projects#filterCategory" data-category="non_cadres" data-professional-projects-target="categoryFilterBtn">Non-cadres</button>
+                </div>
+              </div>
+              
+              <div style="display:flex; flex-direction:column; gap:0.4rem;">
+                <span style="font-size:0.75rem; color:var(--text-muted); font-weight:600; text-transform:uppercase;">Option Complémentaire</span>
+                <div class="hr-filters">
+                  <button class="hr-filter-btn is-active" data-action="click->professional-projects#filterOption" data-option="all" data-professional-projects-target="optionFilterBtn">Tous</button>
+                  <button class="hr-filter-btn" data-action="click->professional-projects#filterOption" data-option="avec_option" data-professional-projects-target="optionFilterBtn">Avec Option</button>
+                  <button class="hr-filter-btn" data-action="click->professional-projects#filterOption" data-option="sans_option" data-professional-projects-target="optionFilterBtn">Sans Option</button>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <div style="margin-bottom:1.5rem; color:var(--text-muted); font-size:0.92rem; line-height:1.6;">
+            <strong>Objectif de la refonte</strong> : L'outil RH d'origine listait les affiliations dans de longs tableaux complexes. J'ai construit un tableau de bord analytique regroupant le statut d'affiliation des salariés (affiliés, non affiliés, dispensés de mutuelle d'entreprise) combiné aux tranches d'âge, le tout alimenté par <strong>Highcharts</strong> et mis à jour dynamiquement via Stimulus.
+          </div>
+          
+          <div class="hr-charts-grid" style="display:grid; grid-template-columns: 1fr 1fr; gap:1.5rem;">
+            <div class="hr-chart-box">
+              <div data-professional-projects-target="hrPieChart" style="width: 100%; height: 300px;"></div>
+            </div>
+            <div class="hr-chart-box">
+              <div data-professional-projects-target="hrColumnChart" style="width: 100%; height: 300px;"></div>
+            </div>
+          </div>
+        </div>
+
+        <!-- PLAYGROUND 4: DESIGN SYSTEM -->
+        <div class="playground-pane d-none" data-professional-projects-target="playgroundPane" data-project-id="components">
+          <div class="playground-header">
+            <h3 class="playground-title"><i class="fas fa-paint-brush gradient-text"></i> Contribution au Design System</h3>
+            <p class="playground-subtitle">Création, correction et refonte des composants graphiques de l'entreprise.</p>
+          </div>
+
+          <div class="row align-items-center">
+            <div class="col-lg-7">
+              <h4 style="color:#fff; font-size:1.2rem; margin-bottom:1rem;">Harmonisation & Qualité UI</h4>
+              <p style="color:var(--text-muted); font-size:0.95rem; line-height:1.7;">
+                Pour assurer la cohérence visuelle sur l'ensemble de nos applications internes, j'ai activement participé au <strong>design system de l'entreprise</strong>. 
+              </p>
+              <p style="color:var(--text-muted); font-size:0.95rem; line-height:1.7; margin-top:0.8rem;">
+                Mon travail a consisté d'une part à coder et documenter de nouveaux composants d'interface modulaires (champs de saisie formatés, alertes contextuelles de statut, boutons d'action), et d'autre part à identifier les faiblesses techniques de composants existants pour les corriger et les ré-implémenter proprement en maximisant les performances de rendu CSS et le support responsive de Bootstrap.
+              </p>
+            </div>
+            
+            <div class="col-lg-5">
+              <div class="glass" style="padding:2rem; border-color:rgba(139, 92, 246, 0.15); background:rgba(0,0,0,0.15)">
+                <h5 style="color:#fff; font-size:1.2rem; margin-bottom:1.2rem;"><i class="fas fa-check-double text-success"></i> Type d'intervention</h5>
+                <div style="display:flex; flex-direction:column; gap:0.8rem; font-size:0.85rem;">
+                  <div style="display:flex; justify-content:space-between;">
+                    <span style="color:var(--text-muted);">Nouveaux composants :</span>
+                    <strong style="color:#fff;">Création & Intégration</strong>
+                  </div>
+                  <div style="display:flex; justify-content:space-between;">
+                    <span style="color:var(--text-muted);">Composants existants :</span>
+                    <strong class="gradient-text">Refonte & Corrections CSS</strong>
+                  </div>
+                  <div style="display:flex; flex-direction:column; gap:0.4rem; margin-top:0.5rem;">
+                    <span style="color:var(--text-muted);">Technologies utilisées :</span>
+                    <div style="display:flex; flex-wrap:wrap; gap:0.4rem;">
+                      <span class="tag tag--blue">Bootstrap CSS</span>
+                      <span class="tag tag--purple">StimulusJS</span>
+                      <span class="tag tag--green">Webpacker</span>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+      </div>
+    </div>
+
   </div>
 </section>
